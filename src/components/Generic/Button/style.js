@@ -47,6 +47,10 @@ const Container = styled.button`
   width: "${getWidth}";
   min-width: 120px;
   ${getSize}
+
+  &: active{
+    transform: scale(0.975);
+  }
 `;
 
 export { Container };
