@@ -20,6 +20,12 @@
     "styled-components": "^6.0.8",
     "web-vitals": "^2.1.4"
   },
+  "engines": {
+    "npm": ">=8.7.0"
+  },
+  "overrides": {
+    "react": "$react"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
