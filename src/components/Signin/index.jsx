@@ -40,6 +40,7 @@ const Signin = () => {
         }
       });
     } catch (err) {
+      message.warning("Serverda hatolik bor")
       return err;
     }
   };

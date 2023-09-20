@@ -6,6 +6,14 @@ import { useNavigate } from "react-router-dom";
 
 const { REACT_APP_BASE_URL: url } = process.env;
 
+const categories = [
+  {id: 1, name: "Apartment"},
+  {id: 2, name: "House"},
+  {id: 3, name: "Villa"},
+  {id: 4, name: "Housegarden"},
+  {id: 5, name: "Office"},
+]
+
 const Category = () => {
   const [users, setUsers] = useState();
   const navigate = useNavigate();
@@ -14,7 +22,7 @@ const Category = () => {
       .then((res) => res.json())
       .then((res) => setUsers(res?.data || []))
       .catch(err => {
-        setUsers([]);
+        setUsers(categories);
         return err;
       });
   }, []);
@@ -53,7 +61,7 @@ const Category = () => {
     ],
   };
   return (
-    <Container>
+    <Container className="slider-recommended">
       <Content>
         <h3 className="title">Category</h3>
         <h5 className="info">

@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { Container, Content } from "./style";
 import { useNavigate } from "react-router-dom";
 import HouseCard from "./../HouseCard/index";
+import { carts } from "../../utils/carts";
 
 const { REACT_APP_BASE_URL: url } = process.env;
 
@@ -14,7 +15,7 @@ const Recent = () => {
       .then((res) => res.json())
       .then((res) => setUsers(res?.data || []))
       .catch(err => {
-        setUsers([]);
+        setUsers(carts);
         return err
       });
   }, []);
@@ -53,7 +54,7 @@ const Recent = () => {
     ],
   };
   return (
-    <Container>
+    <Container className="slider-recommended">
       <Content>
         <h3 className="title">Recent Properties for Rent</h3>
         <h5 className="info">

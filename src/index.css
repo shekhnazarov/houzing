@@ -112,3 +112,8 @@ body {
 }
 
 /* react slick category finished */
+
+.slider-recommended .slick-track{
+  display: flex !important;
+  gap: 20px !important;
+}

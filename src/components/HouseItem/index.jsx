@@ -11,7 +11,7 @@ import {
   IconsDiv,
   MainWrapper,
 } from "./style";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Input, Button } from "../Generic";
 import { Checkbox } from "antd";
 import user from "../../assets/images/user-image.png";
@@ -22,6 +22,7 @@ const { REACT_APP_BASE_URL: url } = process.env;
 const HouseItem = () => {
   const [users, setUsers] = useState();
   const params = useParams();
+  const navigate = useNavigate()
   useEffect(() => {
     fetch(`${url}/houses/id/${params?.id}`, {
       method: "GET",
@@ -41,6 +42,7 @@ const HouseItem = () => {
       });
   }, [params?.id]);
   return (
+    users?.length ? 
     <Container>
       <MainWrapper>
         <Wrapper>
@@ -134,6 +136,10 @@ const HouseItem = () => {
         </Wrapper>
       </MainWrapper>
       <Similar />
+    </Container> : <Container>
+      <img src="https://www.digitalmesh.com/blog/wp-content/uploads/2020/05/404-error.jpg" alt="404 error" style={{width: "40%", marginBottom: "40px"}} />
+      
+      <Button type="dark" onClick={()=> navigate("/home")}>Back Home</Button>
     </Container>
   );
 };

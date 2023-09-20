@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { Container, Content } from "./style";
 import { useNavigate } from "react-router-dom";
 import HouseCard from "./../HouseCard/index";
+import { carts } from "../../utils/carts";
 
 const { REACT_APP_BASE_URL: url } = process.env;
 
@@ -14,7 +15,7 @@ const Recommended = () => {
       .then((res) => res.json())
       .then((res) => setUsers(res?.data || []))
       .catch(err => {
-        setUsers([])
+        setUsers(carts)
       });
   }, []);
   let settings = {
@@ -59,7 +60,7 @@ const Recommended = () => {
           Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
         </h5>
       </Content>
-      <Slider {...settings}>
+      <Slider {...settings} className="slider-recommended">
         {users &&
           users?.map((info) => {
             return (
