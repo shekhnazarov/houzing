@@ -1,0 +1,114 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  /* colors */
+  --colorPrimary: #0d263b;
+  --colorTextSecondary: #696969;
+  --colorTextPrimary: #ffffff;
+  --colorTextTitle: #0d263b;
+  --colorActive: #d3e2ff;
+  --colorBorder: #e6e9ec;
+
+  /* background */
+  --backgroundPrimary: #0061df;
+
+  /* padding */
+  --paddingPrimary: 0 130px;
+}
+
+/* general text */
+.title {
+  color: #0d263b;
+  font-family: "Montserrat";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px; /* 128.571% */
+  letter-spacing: -0.56px;
+}
+
+.subTitle {
+  color: #0d263b;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.info {
+  color: var(--text-color, #696969);
+  /* Paragraph/Small/Regular */
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.beforePrice {
+  color: var(--text-color, #696969);
+  /* Paragraph/XSmall/Special/Strikethrough */
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+  text-decoration-line: strikethrough;
+}
+
+.inline {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* general text end*/
+
+/* slider */
+.header-slider .slick-dots-bottom {
+  margin-bottom: 30px;
+}
+
+.header-slider .slick-dots li button {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+}
+
+.header-slider .slick-dots .slick-active button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.header-slider .slick-dots-bottom button::before {
+  display: none;
+}
+
+/* slider finished*/
+
+/* react slick category */
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+}
+
+/* react slick category finished */
