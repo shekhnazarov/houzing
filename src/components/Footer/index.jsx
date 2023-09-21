@@ -16,20 +16,26 @@ const Footer = () => {
       <Wrapper>
         <Content>
           <Title>Contact Us</Title>
+          <div>
           <Item>
             <Icons.Location />
             <Text margin="true">
               61 Baxtli Oila ko'chasi, Khazorasp, Khorezm, Uzbekistan.
             </Text>
           </Item>
+          </div>
+          <div>
           <Item>
             <Icons.Call />
             <Text margin="true">97 757 91 51</Text>
           </Item>
+          </div>
+          <div>
           <Item>
             <Icons.Email />
             <Text margin="true">shekhnazarovy@gmail.com</Text>
           </Item>
+          </div>
           <Socials>
             <Item>
               <Icons.Facebook />

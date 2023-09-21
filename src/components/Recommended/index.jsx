@@ -38,9 +38,9 @@ const Recommended = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
         },
       },
       {
@@ -53,14 +53,14 @@ const Recommended = () => {
     ],
   };
   return (
-    <Container>
+    <Container className="slider-recommended">
       <Content>
-        <h3 className="title">Recommended</h3>
-        <h5 className="info">
+        <div className="title">Recommended</div>
+        <div className="info">
           Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
-        </h5>
+        </div>
       </Content>
-      <Slider {...settings} className="slider-recommended">
+      <Slider {...settings} className="recommended-slider">
         {users &&
           users?.map((info) => {
             return (

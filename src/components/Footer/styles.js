@@ -26,11 +26,22 @@ const Wrapper = styled.div`
   margin: auto;
   width: 100%;
   gap: 150px;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
 `;
 
 const Content = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 480px) {
+    text-align: center;
+    align-items: center;
+  }
 `;
 
 const Title = styled.h3`

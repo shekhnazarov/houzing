@@ -23,6 +23,12 @@ const Wrapper = styled.div`
   width: 100%;
   gap: 77px;
   margin-top: 40px;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const Content = styled.div`
@@ -32,6 +38,10 @@ const Content = styled.div`
   text-align: center;
   .info-margin {
     margin-top: 8px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 285px;
   }
 `;
 

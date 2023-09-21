@@ -40,7 +40,7 @@ const HouseCard = ({ info = {}, onClick }) => {
       }).catch(err =>  console.log(err));
   };
   return (
-    <Container onClick={onClick}>
+    <Container onClick={onClick} className="housecard">
       <Container.Header>
         <Image src={(attachments && attachments[0].imgPath) || noimg} />
       </Container.Header>

@@ -61,7 +61,7 @@ const Recent = () => {
           Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
         </h5>
       </Content>
-      <Slider {...settings}>
+      <Slider {...settings} className="recommended-slider">
         {users &&
           users?.map((info) => {
             return (

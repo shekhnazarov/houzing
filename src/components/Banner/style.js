@@ -8,6 +8,11 @@ const Container = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 571px;
+  object-fit: cover;
+
+  @media screen and (max-width: 480px) {
+    height: 712px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -21,7 +26,7 @@ const Blur = styled.div`
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
 `;
 
 const Content = styled.div`
@@ -34,6 +39,7 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 `;
 
 Content.Title = styled.h1`
@@ -48,6 +54,12 @@ Content.Title = styled.h1`
   line-height: 36px; /* 128.571% */
   letter-spacing: -0.56px;
   margin-bottom: 60px;
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    padding: 0 16px;
+    margin-bottom: 24px;
+  }
 `;
 
 export { Container, Image, Blur, Content, Wrapper };

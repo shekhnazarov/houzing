@@ -31,13 +31,14 @@ body {
 }
 
 /* general text */
+
 .title {
   color: #0d263b;
   font-family: "Montserrat";
   font-size: 28px;
-  font-style: normal;
   font-weight: 600;
   line-height: 36px; /* 128.571% */
+  font-style: normal;
   letter-spacing: -0.56px;
 }
 
@@ -113,7 +114,15 @@ body {
 
 /* react slick category finished */
 
-.slider-recommended .slick-track{
+.slider-recommended .slick-track {
   display: flex !important;
   gap: 20px !important;
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+  }
 }

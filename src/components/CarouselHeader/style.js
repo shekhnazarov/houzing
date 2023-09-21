@@ -9,6 +9,11 @@ const Container = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 571px;
+  object-fit: cover;
+
+  @media screen and (max-width: 480px){
+    height: 712px;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -30,6 +35,10 @@ const Arrow = styled(arrow)`
 
   &:hover {
     background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  @media screen and (max-width: 480px){
+    display: none;
   }
 `;
 
@@ -63,6 +72,13 @@ Content.Title = styled.h1`
   line-height: 48px; /* 109.091% */
   letter-spacing: -0.88px;
   margin-bottom: 8px;
+
+  @media screen and (max-width: 480px) {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+  }
 `;
 
 Content.Desc = styled.h4`
@@ -72,6 +88,11 @@ Content.Desc = styled.h4`
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+
+  @media screen and (max-width: 480px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
 `;
 
 Content.Price = styled.h3`
@@ -82,6 +103,10 @@ Content.Price = styled.h3`
   font-weight: 600;
   line-height: 36px; /* 128.571% */
   letter-spacing: -0.56px;
+
+  @media screen and (max-width: 480px) {
+    margin-top: 12px;
+  }
 `;
 
 export { Container, Image, Arrow, Blur, Content, Wrapper };

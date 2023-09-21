@@ -54,7 +54,7 @@ const Category = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -68,7 +68,7 @@ const Category = () => {
           Nulla quis curabitur velit volutpat auctor bibendum consectetur sit.
         </h5>
       </Content>
-      <Slider {...settings}>
+      <Slider {...settings} className="slider-category">
         {users?.map((info) => {
           return (
             <CategoryCard
