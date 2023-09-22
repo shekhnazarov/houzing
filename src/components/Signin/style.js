@@ -16,12 +16,17 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 580px;
+  min-width: 300px;
   width: 100%;
   padding: 24px 30px 48px;
   background: #fff;
   border: 1px solid var(--border-color, #e6e9ec);
   box-shadow: 0px 10px 30px 0px rgba(13, 38, 59, 0.05);
   gap: 30px;
+
+  @media screen and (max-width: 680px) {
+    width: 360px;
+  }
 `;
 
 const Info = styled.p`

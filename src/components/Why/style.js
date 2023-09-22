@@ -24,7 +24,7 @@ const Wrapper = styled.div`
   gap: 77px;
   margin-top: 40px;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 680px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -40,8 +40,10 @@ const Content = styled.div`
     margin-top: 8px;
   }
 
-  @media screen and (max-width: 480px) {
-    width: 285px;
+  @media screen and (max-width: 680px) {
+    width: 100%;
+    min-width: 300;
+    max-width: 385;
   }
 `;
 

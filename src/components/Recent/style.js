@@ -8,7 +8,7 @@ const Container = styled.div`
   padding: 96px 130px 48px;
   margin: auto;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 680px) {
     padding: 64px 16px;
 
     .recommended-slider {
@@ -45,7 +45,7 @@ const Content = styled.div`
   align-items: center;
   margin-bottom: 32px;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 680px) {
     text-align: center;
 
     .info {

@@ -15,7 +15,8 @@ const getSize = ({ width }) => {
 };
 
 const Container = styled.div`
-  display: flex;
+  position: relative;
+  display: none;
   align-items: center;
   padding: 10px 130px;
   max-width: 1440px;
@@ -23,30 +24,39 @@ const Container = styled.div`
   width: 100%;
   background-color: #fff;
   gap: 20px;
+  border-radius: 4px;
+
 
   @media screen and (max-width: 680px) {
-    display: none;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 12px 24px;
     margin: 120px 16px 0;
   }
+
 `;
 
 const MenuWrapper = styled.div`
-  width: 100%;
+  display: ${({open}) => open ? "flex" : "none"};
+  flex-direction: column;
+  position: absolute;
+  top: 140px;
   padding: 30px;
   background-color: white;
   border: 1px solid var(--colorBorder);
+  z-index: 100;
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  border-radius: 4px;
 
   @media screen and (max-width: 680px){
-    width: 400px;
+    width: calc(100% - 60px);
   }
 `;
 const Section = styled.div`
   width: ${getSize};
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   margin-top: 10px;
   margin-bottom: 20px;
   gap: 20px;

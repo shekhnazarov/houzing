@@ -9,7 +9,7 @@ import { ReactComponent as linkedin } from "../../assets/icons/linkedinf.svg";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
-  display: flex;
+  display: ${({disp}) => disp ? "none" : "flex"};
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   width: 100%;
   gap: 150px;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 680px) {
     flex-direction: column;
     align-items: center;
     gap: 32px;
@@ -38,7 +38,7 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 680px) {
     text-align: center;
     align-items: center;
   }

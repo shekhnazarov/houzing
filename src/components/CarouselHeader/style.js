@@ -11,7 +11,7 @@ const Image = styled.img`
   height: 571px;
   object-fit: cover;
 
-  @media screen and (max-width: 480px){
+  @media screen and (max-width: 680px){
     height: 712px;
   }
 `;
@@ -37,7 +37,7 @@ const Arrow = styled(arrow)`
     background-color: rgba(255, 255, 255, 0.5);
   }
 
-  @media screen and (max-width: 480px){
+  @media screen and (max-width: 680px){
     display: none;
   }
 `;
@@ -61,6 +61,11 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+
+  @media screen and (max-width: 680px){
+    padding: 0 16px;
+  }
 `;
 
 Content.Title = styled.h1`

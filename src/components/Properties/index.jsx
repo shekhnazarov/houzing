@@ -42,7 +42,7 @@ export const Properties = () => {
         })}
       </Wrapper>
     </Container> : <Container>
-      <img src="https://www.digitalmesh.com/blog/wp-content/uploads/2020/05/404-error.jpg" alt="404 error" style={{width: "40%", marginBottom: "40px"}} />
+      <img src="https://www.digitalmesh.com/blog/wp-content/uploads/2020/05/404-error.jpg" alt="404 error" style={{width: "40%", marginBottom: "40px", minWidth: "230px"}} />
       
       <Button type="dark" onClick={()=> navigate("/home")}>Back Home</Button>
     </Container>

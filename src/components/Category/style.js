@@ -8,8 +8,8 @@ const Container = styled.div`
   padding: 96px 130px;
   margin: auto;
 
-  @media screen and (max-width: 480px) {
-    padding: 32px 16px;
+  @media screen and (max-width: 680px) {
+    padding: 72px 16px;
 
     .slider-category {
       align-items: center;

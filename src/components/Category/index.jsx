@@ -69,7 +69,8 @@ const Category = () => {
         </h5>
       </Content>
       <Slider {...settings} className="slider-category">
-        {users?.map((info) => {
+        { users?.length ? 
+        users?.map((info) => {
           return (
             <CategoryCard
               key={info.id}
@@ -77,7 +78,16 @@ const Category = () => {
               data={info}
             />
           );
-        })}
+        }) : categories?.map((info) => {
+          return (
+            <CategoryCard
+              key={info.id}
+              onClick={() => navigate(`/properties?category_id=${info.id}`)}
+              data={info}
+            />
+          );
+        })
+        }
       </Slider>
     </Container>
   );

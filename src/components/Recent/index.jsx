@@ -37,11 +37,11 @@ const Recent = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 680,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
         },
       },
       {
@@ -62,12 +62,20 @@ const Recent = () => {
         </h5>
       </Content>
       <Slider {...settings} className="recommended-slider">
-        {users &&
+      {users?.length ?
           users?.map((info) => {
             return (
               <HouseCard
                 key={info.id}
-                onClick={() => navigate(`/properties?category_id=${info.id}`)}
+                onClick={() => navigate(`/properties/${info.id}`)}
+                info={info}
+              />
+            );
+          }) : carts?.map((info) => {
+            return (
+              <HouseCard
+                key={info.id}
+                onClick={() => navigate(`/properties/${info.id}`)}
                 info={info}
               />
             );

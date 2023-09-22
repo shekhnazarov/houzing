@@ -29,14 +29,14 @@ const Recommended = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           infinite: true,
           dots: true,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 680,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -48,6 +48,7 @@ const Recommended = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          initialSlide: 1,
         },
       },
     ],
@@ -61,8 +62,16 @@ const Recommended = () => {
         </div>
       </Content>
       <Slider {...settings} className="recommended-slider">
-        {users &&
+        {users?.length ?
           users?.map((info) => {
+            return (
+              <HouseCard
+                key={info.id}
+                onClick={() => navigate(`/properties/${info.id}`)}
+                info={info}
+              />
+            );
+          }) : carts?.map((info) => {
             return (
               <HouseCard
                 key={info.id}

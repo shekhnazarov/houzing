@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Filter from "../Filter";
 import {
   Container,
@@ -9,6 +9,9 @@ import {
   Link,
   LogoText,
   Menu,
+  Icons,
+  Responsemenu,
+  Socials
 } from "./style";
 import { NavbarList } from "../../utils/Navbar";
 import Button from "../Generic/Button/index.jsx";
@@ -17,6 +20,7 @@ import Footer from "../Footer";
 import { Dropdown, Space } from "antd";
 
 const Navbar = () => {
+  const [modal, setModal] = useState(false)
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
 
@@ -40,11 +44,16 @@ const Navbar = () => {
     <Container>
       <Main>
         <Wrapper>
-          <Section onClick={() => navigate("/home")}>
+          <Section className="nav__burger" onClick={() => setModal(!modal)}>
+            {
+              modal ? <Icons.Close /> : <Icons.Nav />
+            }
+            </Section>
+          <Section onClick={() => {navigate("/home")}}>
             <Logo />
             <LogoText>Houzing</LogoText>
           </Section>
-          <Section>
+          <Section className="nav-menu">
             {NavbarList.map(({ id, path, title, hidden }, index) => {
               return (
                 !hidden && (
@@ -59,7 +68,7 @@ const Navbar = () => {
               );
             })}
           </Section>
-          <Section onClick={onClick}>
+          <Section onClick={onClick} className="nav-menu">
             {!token ? (
               <Button width={120} type="dark">
                 Login
@@ -101,11 +110,43 @@ const Navbar = () => {
               </Dropdown>
             )}
           </Section>
+          <Section onClick={onClick} className="nav__login-res">
+            <Icons.Login />
+          </Section>
         </Wrapper>
+        <Responsemenu className="active-modal" disp={modal}>
+          <Section></Section>
+          <Section className="response__menu" flex="true">
+          {NavbarList.map(({ id, path, title, hidden }, index) => {
+              return (
+                !hidden && (
+                  <Link
+                    key={index}
+                    to={path}
+                    className={({ isActive }) => isActive && "active"}
+                    onClick={() => setModal(!modal)}
+                  >
+                    {title}
+                  </Link>
+                )
+              );
+            })}
+          </Section>
+          <Socials>
+              <Icons.Facebook />
+              <Icons.Twitter />
+              <Icons.Instagram />
+              <Icons.Linkedin />
+          </Socials>
+        </Responsemenu>
       </Main>
       <Filter />
-      <Outlet />
-      <Footer />
+      {
+        !modal && <Outlet />
+      }
+      {
+        !modal && <Footer />
+      }
     </Container>
   );
 };
