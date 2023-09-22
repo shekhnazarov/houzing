@@ -42,8 +42,8 @@ const Content = styled.div`
 
   @media screen and (max-width: 680px) {
     width: 100%;
-    min-width: 300;
-    max-width: 385;
+    min-width: 300px;
+    max-width: 385px;
   }
 `;
 

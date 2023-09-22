@@ -22,6 +22,9 @@ const Container = styled.div`
 
 const Main = styled.div`
   display: flex;
+  position: sticky;
+  z-index: 999;
+  top: 0;
   flex-direction: column;
   justify-content: center;
   background-color: var(--colorPrimary);
