@@ -28,6 +28,7 @@ const Wrapper = styled.div`
   gap: 150px;
 
   @media screen and (max-width: 680px) {
+    padding: 0;
     flex-direction: column;
     align-items: center;
     gap: 32px;
@@ -39,7 +40,7 @@ const Content = styled.div`
   flex-direction: column;
 
   @media screen and (max-width: 680px) {
-    width: 70%;
+    width: 90%;
     text-align: center;
     align-items: center;
   }
@@ -84,6 +85,10 @@ Icons.Location = styled(location)`
   width: 18px;
   height: 18px;
   margin-right: 20px;
+
+  @media screen and (max-width: 680px) {
+    margin-right: 0;
+  }
 `;
 Icons.Call = styled(call)`
   width: 18px;
