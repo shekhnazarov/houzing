@@ -39,6 +39,7 @@ const Content = styled.div`
   flex-direction: column;
 
   @media screen and (max-width: 680px) {
+    width: 70%;
     text-align: center;
     align-items: center;
   }
